@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#footer_body{
+	background-color:rgb(9,11,19);
+	text-align:center;
+	cursor: default;
+}
+
+.footer_span{
+	color:#D8D8D8;
+	display: inline-block;
+	padding: 9px 10px;
+	font-size: 12px;
+}
+
+.clickable:hover{
+	color:#FAFAFA;
+	cursor:pointer;
+}
+
+#footer_logo{
+	width:90px;
+	padding: 15px 0px;
+}
+
+.line{
+	padding: 9px 0px;
+}
