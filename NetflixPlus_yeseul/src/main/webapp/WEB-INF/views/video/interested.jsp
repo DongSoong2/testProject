@@ -13,7 +13,7 @@
 	<header>
 		<jsp:include page="/resources/headerfooter/header.jsp" />
 	</header>
-
+	
 	<div class="movie-content">
 		<div id="interested-text">
 			<!-- css에서 margin도 padding도 안 먹어서 결국 br -->
