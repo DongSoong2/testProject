@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 위 문장으로 아래는 mapper의 내용이 됨 -->
+  
+  <mapper namespace="VideoDAO">
+  
+  	<!-- 액션어드벤처라는 장르를 가진 데이터들의 img 주소 가져오기 -->
+  	<select id="getActionNadventure" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_genre LIKE '%액션 어드벤처%'
+  	</select>
+    
+    <!-- 애니메이션이라는 장르를 가진 데이터들의 img 주소 가져오기 -->
+  	<select id="getAnimation" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_genre LIKE '%애니메이션%'
+  	</select>
+  	
+  	<!-- 가족이라는 장르를 가진 데이터들의 img 주소 가져오기 -->
+  	<select id="getFamily" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_genre LIKE '%가족%'
+  	</select>
+  
+  	<!-- 드라마라는 장르를 가진 데이터들의 img 주소 가져오기 -->
+  	<select id="getDrama" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_genre LIKE '%드라마%'
+  	</select>
+  
+    <!-- 디즈니라는 플랫폼에서 나온 데이터들의 img 주소 가져오기 -->
+  	<select id="getDisney" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_platform LIKE '%Disney%'
+  	</select>
+  
+    <!-- 마블이라는 플랫폼에서 나온 데이터들의 img 주소 가져오기 -->
+  	<select id="getMarvel" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_platform LIKE '%Marvel%'
+  	</select>
+  
+    <!-- 디즈니라는 플랫폼에서 나온 데이터들의 img 주소 가져오기 -->
+  	<select id="getPixar" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_platform LIKE '%Pixar%'
+  	</select>
+  
+    <!-- 모든 데이터들의 img 주소 가져오기 -->
+  	<select id="getAll" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  	</select>
+  	
+    <!-- 관람등급이 all인 데이터들의 img 주소 가져오기 -->
+  	<!-- <select id="getKids" parameterType="video" resultType="video"> -->
+  	<select id="getKids" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_rating = 'ALL'
+  	</select>
+
+	<!-- 검색어가 제목에 포함된 데이터들의 img 주소 가져오기 -->
+  	<select id="search" parameterType="video" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_title LIKE '%${search}%'
+  	</select>
+  	
+  	<!-- 관심 콘텐츠 사항이 1인 데이터들의 img 주소 가져오기 -->
+  	<select id="interested" resultType="video">
+  		SELECT video_image
+  			FROM videoDB
+  			WHERE video_interested = 1
+  	</select>
+  
+  </mapper>
