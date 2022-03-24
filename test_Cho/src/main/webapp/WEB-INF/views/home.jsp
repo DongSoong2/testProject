@@ -8,8 +8,7 @@
 <h1>
 	Hello world!  
 </h1>
-ndvnisddvjopjopjsodpvdjopvjo
-fafasf
+
 <P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
